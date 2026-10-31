@@ -4,12 +4,13 @@
     border: solid rgb(255, 0, 0) 2px;
     margin: 0px;
 }
+html {
+    border: none;
+}
+
 
 body {
     background-color: #111;
-}
-html {
-    border: none;
 }
 
 div.contacts-box {
@@ -19,7 +20,7 @@ div.contacts-box {
 
 
     display: flex;
-    max-width: fit-content;
+    /* max-width: fit-content; */
 }
 
 section {
