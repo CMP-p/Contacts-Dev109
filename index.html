@@ -85,11 +85,71 @@
                 <td>Steven</td>
             </tr>
         </table>
-        <button onclick="">
+        <button onclick="        
+            const contacts = [
+            'Arnold',
+            'Sly',
+            'Dwayne',
+            'Vin',
+            'JCVD',
+            'Steven'
+        ];    
+        let userInput;
+        let searching = true;
+        let continueSearching;
+        while (searching) {
+            continueSearching = true;
+            userInput = prompt('Enter the slot number you want displayed');
+            switch (userInput) {
+                case '0':
+                    alert(`You selected ${contacts[0]}`)
+                    break
+                case '1':
+                    alert(`You selected ${contacts[1]}`)
+                    break
+                case '2':
+                    alert(`You selected ${contacts[2]}`)
+                    break
+                case '3':
+                    alert(`You selected ${contacts[3]}`)
+                    break
+                case '4':
+                    alert(`You selected ${contacts[4]}`)
+                    break
+                case '5':
+                    alert(`You selected ${contacts[5]}`)
+                    break
+
+                default: 
+                    alert('Name not found, please try again.')
+                    break
+            }
+
+            while (continueSearching) {
+                userInput = prompt('search for another name? (y/n)').toLowerCase()
+                switch (userInput) {
+                    case 'y':
+                    case 'yes':
+                        console.log('continuing action')
+                        continueSearching = false
+                        break
+                    case 'n':
+                    case 'no':
+                        continueSearching = false
+                        searching = false;
+                        console.log('end action')
+                        break
+                    default:
+                        alert('Please type y or n.')
+                        break
+                }
+            }
+        }
+        console.log('Action finished')">
             Press Me!
         </button>
     </div>
-    <script>
+    <!-- <script>
         /*
         a button that opens a prompt
             'Enter the slot number you want displayed'
@@ -164,6 +224,6 @@
         //Use a while loop to search for name.
     
         
-    </script>
+    </script> -->
 </body>
 </html>
