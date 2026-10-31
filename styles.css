@@ -1,0 +1,27 @@
+/* Display a grid of contacts. Have headers be a different color  */
+
+* {
+    border: solid rgb(255, 0, 0) 2px;
+    margin: 0px;
+}
+
+body {
+    background-color: #111;
+}
+html {
+    border: none;
+}
+
+div.contacts-box {
+    border: 1px solid #000;
+    background-color: rgb(90, 90, 90);
+    padding: 5px;
+
+
+    display: flex;
+    max-width: fit-content;
+}
+
+section {
+    margin: 10px;
+}
