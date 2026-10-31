@@ -52,14 +52,6 @@
 <body>
     <!-- 
     a 2 column list of contacts.
-    a button that opens a prompt
-        'Enter the slot number you want displayed'
-           if number in array, display name (log & alert).
-           else if number not in array, "not found try again"
-        'Search for another name?' -->
-    <!-- column 1: slot number | Column 2: Name -->
-     <!--   0 | Name0
-            1 | Name1
             2 | Name2 -->
     <!-- Html - a div with a 2x7 grid -->
     <div class="contacts-box">
@@ -93,9 +85,84 @@
                 <td>Steven</td>
             </tr>
         </table>
+        <button onclick="">
+            Press Me!
+        </button>
     </div>
     <script>
-        prompt('it\'s a button')
+        /*
+        a button that opens a prompt
+            'Enter the slot number you want displayed'
+            if number in array, display name (log & alert).
+            else if number not in array, "not found try again"
+            'Search for another name?'
+        column 1: slot number | Column 2: Name
+            0 | Name0
+                1 | Name1
+        */
+        const contacts = [
+            'Arnold',
+            'Sly',
+            'Dwayne',
+            'Vin',
+            'JCVD',
+            'Steven'
+        ];    
+        let userInput;
+        let searching = true;
+        let continueSearching;
+        while (searching) {
+            continueSearching = true;
+            userInput = prompt('Enter the slot number you want displayed');
+            switch (userInput) {
+                case '0':
+                    alert(`you selected ${contacts[0]}`)
+                    break
+                case '1':
+                    alert(`you selected ${contacts[1]}`)
+                    break
+                case '2':
+                    alert(`you selected ${contacts[2]}`)
+                    break
+                case '3':
+                    alert(`you selected ${contacts[3]}`)
+                    break
+                case '4':
+                    alert(`you selected ${contacts[4]}`)
+                    break
+                case '5':
+                    alert(`you selected ${contacts[5]}`)
+                    break
+
+                default: 
+                    alert('Name not found, please try again.')
+                    break
+            }
+
+            while (continueSearching) {
+                userInput = prompt('search for another name? (y/n)').toLowerCase()
+                switch (userInput) {
+                    case 'y':
+                    case 'yes':
+                        console.log('continuing action')
+                        continueSearching = false
+                        break
+                    case 'n':
+                    case 'no':
+                        continueSearching = false
+                        searching = false;
+                        console.log('end action')
+                        break
+                    default:
+                        alert('Please type y or n.')
+                        break
+                }
+            }
+        }
+        console.log('Action finished')
+        //Use an Array to store Names. 
+        //Use a while loop to search for name.
+    
         
     </script>
 </body>
