@@ -21,8 +21,9 @@
             padding: 15px;
             margin: 10px;
 
-            /* display: flex;
-            justify-content: center; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         table {
@@ -46,14 +47,16 @@
             padding: 5px;
         }
 
+        button {
+            background-image: linear-gradient(20deg, #f9f, rgb(250, 190, 0));
+            margin: 5px;
+            min-width: 100px;
+        }
+
     </style>
 </head>
 
 <body>
-    <!-- 
-    a 2 column list of contacts.
-            2 | Name2 -->
-    <!-- Html - a div with a 2x7 grid -->
     <div class="contacts-box">
         <table>
             <tr>
@@ -97,7 +100,7 @@
         let userInput;
         let searching = true;
         let continueSearching;
-        while (searching) {
+        while (searching) { //loop to keep searching
             continueSearching = true;
             userInput = prompt('Enter the slot number you want displayed');
             switch (userInput) {
@@ -125,7 +128,7 @@
                     break
             }
 
-            while (continueSearching) {
+            while (continueSearching) { //loop to ask if continue
                 userInput = prompt('search for another name? (y/n)').toLowerCase()
                 switch (userInput) {
                     case 'y':
